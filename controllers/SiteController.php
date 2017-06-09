@@ -60,8 +60,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $arr = array(1,2,3,4,5,6,7,8);
-        P($arr);
+        // $arr = array(1,2,3,4,5,6,7,8);
+        // P($arr);
         return $this->render('index');
     }
 
