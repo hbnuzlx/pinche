@@ -8,12 +8,13 @@
 
 ?>
 <h1>个人信息</h1>
-<p>姓名：<?=$user['name']; ?></p>
-<p>年龄：<?=$user['age']; ?></p>
-<p>国籍：<?=$user['Country']; ?></p>
+<p>姓名：<?=$user['uname']==''?"No name":$user['uname']; ?></p>
+<p>年龄：<?=$user['mobile']==''?"No name":$user['mobile']; ?></p>
+<p>国籍：<?=$user['createline']==''?"No name":$user['createline']; ?></p>
 <hr/>
 
 <h1>工作信息</h1>
 <p>公司：<?=$info['Company'];?></p>
 <p>位置：<?=$info['Location'];?></p>
 <p>楼层：<?=$info['floor'];?></p>
+<?php echo $this->render("about");  ?>
