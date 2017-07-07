@@ -36,7 +36,6 @@ class HomeController extends Controller{
 //        $res = $user->attributes['id'];
 
 
-
         echo '<meta charset="utf-8" /><pre>';var_dump($res);exit;
 //        echo $user['name'];exit;
 //        $user = array("name"=>"郑连新","age"=>"26","Country"=>"China");
@@ -46,11 +45,13 @@ class HomeController extends Controller{
     }
 
     public function actionAbout(){
+//        echo "aaaaa";exit;
+        $this->layout = "nimei";
         $user = array("name"=>"郑连新","age"=>"26","Country"=>"China");
         $info = array("Company"=>"北京微指数科技有限公司","Location"=>"北京市朝阳区浦项中心","floor"=>"5");
 //        return $this->renderPartial("index",compact("user",'info'));
 //        return $this->render("index");
-        return $this->renderPartial("about",compact("user",'info'));
+        return $this->render("about",compact("user",'info'));
     }
 
     public function actionCateuser(){
@@ -80,6 +81,11 @@ class HomeController extends Controller{
 //        echo $sort->createUrl('createtime');
         echo '<meta charset="utf-8" /><pre>';var_dump($info);echo $page->limit,'---',$page->offset;exit;
         $this->render();
+    }
+
+    public function actionLogin(){
+//        echo "登陆界面";exit;
+        $this->render("login");
     }
 
 }

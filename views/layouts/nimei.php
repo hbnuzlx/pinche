@@ -9,9 +9,11 @@
 <head>
     <meta charset="utf-8" />
     <title>欢迎使用！</title>
+    <link rel="text/css" href="css/site.css" />
 </head>
 
 <body>
+<h1>这是自定义模板</h1>
     <?=$content; ?>
 </body>
 
